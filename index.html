@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto de Firebase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="container">
+
+    <div class="row">
+        <div class="input-field col s12 l6">
+            <input type="text" id="pnombre" class="validate">
+            <label for="first_name">Primer Nombre</label>
+        </div>
+        <div class="input-field col s12 l6">
+            <input type="text" id="snombre" class="validate">
+            <label for="last_name">Segundo Nombre</label>
+        </div>
+        <div class="input-field col s12">
+            <input type="number" id="e" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Edad</label>
+        </div>
+        <button id="guardar" class="btn waves-effect waves-light">Guardar
+          <i class="material-icons">send</i>
+        </button>
+    </div>
+    <br><br>
+
+    <!-- Ver los registros -->
+    <h2>Registros</h2>
+    <hr>
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th data-field="id">ID</th>
+                <th data-field="primer">Primer Nombre</th>
+                <th data-field="segundo">Segundo Nombre</th>
+                <th data-field="edad">Edad</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla">
+
+        </tbody>
+    </table>
+
+    <!-- FORMULARIO MODAL PARA EDITAR -->
+
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Editar los datos</h4>
+            <p>
+                <input type="text" id="enombre" class="validate">
+                <input type="text" id="esnombre" class="validate">
+                <input type="number" id="ee" class="validate">
+            </p>
+        </div>
+        <div class="modal-footer align-center">
+            <button id="editar" class="align-center btn-flat waves-effect waves-light modal-action modal-close">Guardar
+              </button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Firestore -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+    </script>
+</body>
+
+</html>
