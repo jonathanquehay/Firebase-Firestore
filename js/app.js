@@ -2,9 +2,9 @@
 //Autenticación de firebase
 //************************************** */
 firebase.initializeApp({
-    apiKey: "AIzaSyCTlcdIsc2eIfIZxQHAAC7mOijGJIoZRGg",
-    authDomain: "practica-d583a.firebaseapp.com",
-    projectId: "practica-d583a"
+    apiKey: "AQUI TU API",
+    authDomain: "AQUI TU DOMINIO",
+    projectId: "AQUI PROYECTO ID"
 });
 
 // Inicializar Firestore
