@@ -79,7 +79,7 @@ function borrar(id) {
         .then((willDelete) => {
             if (willDelete) {
                 db.collection("datos").doc(id).delete().then(function() {
-                    swal("Poof! Your Registro eliminado!", {
+                    swal("Poof! Registro eliminado!", {
                         icon: "success",
                     });
                 })
